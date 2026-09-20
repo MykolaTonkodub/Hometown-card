@@ -3,7 +3,6 @@ body {
     text-align: center;
     margin: 0;
     width: 100%;
-    margin: 0 auto;
     background: linear-gradient(to bottom, #ffffff, #f1ffcf);
     
    
@@ -14,11 +13,16 @@ body {
     background-image: url("https://images.unsplash.com/photo-1639341267320-2d062b250c0d?q=80&w=929&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: center;
-    
+
     width: 100%;
-    height: 400px;
+    max-width: 2560px;
+    min-height: 400px;
+
     padding: 1px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
+
 
 #hero-title {
     display: inline-block;
@@ -26,10 +30,12 @@ body {
     background-color: rgba(0, 56, 82, 0.849);
     padding: 15px 20px;
     border-radius: 15px;
+
     font-size: 50px;
-    margin-top: 150px;
+
+    margin-top: 100px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
-    margin-bottom: 10px;
+    clamp (30px, 5vw, 50px);
 }
 
 #hero-subtitle {
@@ -37,10 +43,11 @@ body {
     color: white;
     font-size: 30px;
     text-shadow: 0 0 10px rgb(0, 0, 0);
-    margin-top: 0;
+    margin-top: 1px;
     background-color: rgba(30, 111, 148, 0.849);
     padding: 15px 20px;
     border-radius: 15px;
+    clamp (20px, 5vw, 30px);
 }
 
 .img-container {
@@ -51,8 +58,14 @@ body {
 
     margin-top: 20px;
 
-    
+}
 
+@media (max-width: 600px) {
+.img-container {
+    flex-direction: column;
+    align-items: center;
+
+}
 }
 
 .places_img {
@@ -60,11 +73,18 @@ body {
     height: 150px;
     margin: 10px;
     border-radius: 100px;
+
+    object-fit: cover;
 }
 
 .selection {
 
-    padding: 30px 0 50px 0;
+    padding: 30px 30px 50px 30px;
+    width: 100%;
+    max-width: 2560px;
+    margin: 0 auto;
+
+    box-sizing: border-box;
 
 }
 
@@ -78,16 +98,24 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     margin: 30px auto;
+
     background-color: rgb(95, 189, 233);
     padding: 20px;
-    width: 500px;
+
+    width: 100%;
+    max-width: 500px;
+
     border-radius: 15px;
     border-bottom: 5px solid #000000b2;
+
+    box-sizing: border-box;
 }
 
-#me_img {
-    width: 200px;
+.me_img {
+    width: 1500px;
+    max-width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 15px;
@@ -103,10 +131,29 @@ body {
     
 }
 
-#guide-title {
+.guide-title {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 24px;
+}
+
+@media (max-width: 600px) {
+    .guide_selection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guide_text {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .me_img {
+        width: 100%;
+        max-width: 180px;
+        height: 250px;
+    }
 }
 
 
