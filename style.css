@@ -35,19 +35,20 @@ body {
 
     margin-top: 100px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.712);
-    clamp (30px, 5vw, 50px);
+    font-size: clamp (30px, 5vw, 50px);
 }
 
 #hero-subtitle {
     display: inline-block;
     color: white;
-    font-size: 30px;
     text-shadow: 0 0 10px rgb(0, 0, 0);
     margin-top: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: rgba(30, 111, 148, 0.849);
-    padding: 15px 20px;
+    padding: 15px 10px;
     border-radius: 15px;
-    clamp (20px, 5vw, 30px);
+    font-size: clamp (30px, 5vw, 30px);
 }
 
 .img-container {
@@ -156,4 +157,7 @@ body {
     }
 }
 
+.guide_card {
 
+    margin: 0 30px;
+}
